@@ -24,6 +24,7 @@
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
+      <change when="2022-11-02" who="RachelMilio">Added objectName types</change>
     	<change when="2021-08-07" who="#DKJ">Aligning schema with CWRC publlication</change>
       <change when="2020-07-26" who="#JC">Various minor updates to ODD over time, version 0.8</change>
       <change when="2018-07-11" who="#JC">Minor updates to ODD, version 0.5</change>
@@ -191,125 +192,6 @@
                   </valItem>
                 </valList>
               </attDef>
-          
-              <!-- commenting out for now as requested to 'leave it open and flexible'  -->
-              <!--      <attDef ident="type" mode="change">
-                     <valList mode="add" type="closed">
-                        <valItem ident="activity">
-                           <desc>name of an activity</desc>
-                        </valItem>
-                        <valItem ident="animal">
-                           <desc>name of a type of animal</desc>
-                        </valItem>
-                        <valItem ident="army">
-                           <desc>name of an army or related</desc>
-                        </valItem>
-                        <valItem ident="character">
-                           <desc>name of a character</desc>
-                        </valItem>
-                        <valItem ident="children">
-                           <desc>name of children</desc>
-                        </valItem>
-                        <valItem ident="council">
-                           <desc>name of a council</desc>
-                        </valItem>
-                        <valItem ident="court_legal">
-                           <desc>name of a court or other legal body</desc>
-                        </valItem>
-                        <valItem ident="document">
-                           <desc>name of a document</desc>
-                        </valItem>
-                        <valItem ident="drink">
-                           <desc>name of a drink</desc>
-                        </valItem>
-                        <valItem ident="foodstuff">
-                           <desc>name of some sort of foodstuff</desc>
-                        </valItem>
-                        <valItem ident="guild">
-                           <desc>name of a guild</desc>
-                        </valItem>
-                        <valItem ident="instrument">
-                           <desc>name of an instrument</desc>
-                        </valItem>
-                        <valItem ident="issue_social">
-                           <desc>name of a social issue</desc>
-                        </valItem>
-                        <valItem ident="man">
-                           <desc>name of a man</desc>
-                        </valItem>
-                        <valItem ident="material_building">
-                           <desc>name of a material or building</desc>
-                        </valItem>
-                        <valItem ident="occasion_event">
-                           <desc>name of an event</desc>
-                        </valItem>
-                        <valItem ident="occasion_religion">
-                           <desc>name of a religious event</desc>
-                        </valItem>
-                        <valItem ident="occasion_tradition">
-                           <desc>name of a traditional event</desc>
-                        </valItem>
-                        <valItem ident="occupation">
-                           <desc>name of an occupation</desc>
-                        </valItem>
-                        <valItem ident="office">
-                           <desc>name of an office</desc>
-                        </valItem>
-                        <valItem ident="place_built">
-                           <desc>name of a built place</desc>
-                        </valItem>
-                        <valItem ident="place_court">
-                           <desc>name of a place of a court</desc>
-                        </valItem>
-                        <valItem ident="place_playing">
-                           <desc>name of a playing place</desc>
-                        </valItem>
-                        <!-\- This would be better done with region -\->
-                        <valItem ident="place_region">
-                           <desc>name of a region</desc>
-                        </valItem>
-                        <valItem ident="place_religion">
-                           <desc>name of a religion</desc>
-                        </valItem>
-                        <!-\- This would be better done with settlement -\->
-                        <valItem ident="place_settlement">
-                           <desc>name of a settlement, town, or city</desc>
-                        </valItem>
-                        <valItem ident="place_sub_settlement">
-                           <desc>name of a sub-settlement, suburb, or area of a city</desc>
-                        </valItem>
-                        <valItem ident="play_title">
-                           <desc>name of a title of a play</desc>
-                        </valItem>
-                        <valItem ident="prop">
-                           <desc>name of a a propr</desc>
-                        </valItem>
-                        <valItem ident="rank">
-                           <desc>name of a rank</desc>
-                        </valItem>
-                        <valItem ident="street">
-                           <desc>name of a street</desc>
-                        </valItem>
-                        <!-\- This would be better done with term -\->
-                        <valItem ident="subject">
-                           <desc>name of a particular subject</desc>
-                        </valItem>
-                        <valItem ident="troupe">
-                           <desc>name of a performing troupe</desc>
-                        </valItem>
-                        <valItem ident="woman">
-                           <desc>name of a woman</desc>
-                        </valItem>
-                        <!-\- This would be better done with title -\->
-                        <valItem ident="work_title">
-                           <desc>name of a title of a work</desc>
-                        </valItem>
-                        <valItem ident="other">
-                           <desc>another non-standard type of name</desc>
-                        </valItem>
-                     </valList>
-                  </attDef>
--->
             </attList>
           </elementSpec>
           
@@ -824,6 +706,35 @@
           				</valItem>
           			</valList>
           		</attDef>
+          	  <!-- DKJ: beginning list of occupations/guilds as @roles to be tagged with persName -->
+          	  <attDef ident="role" mode="change">
+          	    <valList mode="add" type="closed">
+          	      <valItem ident="baker" mode="add"/>
+          	      <valItem ident="barber" mode="add"/>
+          	      <valItem ident="blacksmith" mode="add"/>
+          	      <valItem ident="brewer" mode="add"/>
+          	      <valItem ident="butcher" mode="add"/>
+          	      <valItem ident="carpenter" mode="add"/>
+          	      <valItem ident="clothWorker" mode="add"/>
+          	      <valItem ident="cooper" mode="add"/>
+          	      <valItem ident="draper" mode="add"/>
+          	      <valItem ident="fletcher" mode="add"/>
+          	      <valItem ident="gardener" mode="add"/>
+          	      <valItem ident="glover" mode="add"/>
+          	      <valItem ident="goldsmith" mode="add"/>
+          	      <valItem ident="haberdasher" mode="add"/>
+          	      <valItem ident="ironmonger" mode="add"/>
+          	      <valItem ident="mason" mode="add"/>
+          	      <valItem ident="mercer" mode="add"/>
+          	      <valItem ident="merchantTaylor" mode="add"/>
+          	      <valItem ident="plumber" mode="add"/>
+          	      <valItem ident="salter" mode="add"/>
+          	      <valItem ident="scrivener" mode="add"/>
+          	      <valItem ident="skinner" mode="add"/>
+          	      <valItem ident="stationer" mode="add"/>
+          	      <valItem ident="vintner" mode="add"/>
+          	    </valList>
+          	  </attDef>
           		<attDef ident="calendar" mode="delete"/>
           		<attDef ident="when-iso" mode="delete"/>
           		<attDef ident="notBefore-iso" mode="delete"/>
@@ -836,6 +747,7 @@
           		<attDef ident="scope" mode="delete"/>
           		<attDef ident="source" mode="delete"/>
           	</attList>
+            
           </elementSpec>
         	
           <!-- placeName: modify @cert for CWRC added by DJ (removed original REED definite/reasonably certain, probable, speculative to align with CWRC)-->
