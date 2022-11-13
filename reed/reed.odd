@@ -329,6 +329,9 @@
                   <valItem ident="researchNote">
                     <desc>This note satisfies the CWRC research note attribute</desc>
                   </valItem>
+                  <valItem ident="translation">
+                    <desc>This is the original language in which the record was transcribed</desc>
+                  </valItem>
                 </valList>
               </attDef>
             </attList>
@@ -732,6 +735,7 @@
           	      <valItem ident="scrivener" mode="add"/>
           	      <valItem ident="skinner" mode="add"/>
           	      <valItem ident="stationer" mode="add"/>
+          	      <valItem ident="tailor" mode="add"/>
           	      <valItem ident="vintner" mode="add"/>
           	    </valList>
           	  </attDef>
@@ -797,6 +801,7 @@
                   <valItem ident="fuel"/>
                   <valItem ident="torch"/>
                   <valItem ident="instrument"/>
+                  <valItem ident="clothing"/>
                   <valItem ident="other"/>
                 </valList>
               </attDef>
