@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2022-11-13T15:53:16Z. .
+Schema generated from ODD source 2022-11-18T21:58:05Z. .
 TEI Edition: Version 4.3.0. Last updated on
         31st August 2021, revision b4f72b1ff
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.3.0/
@@ -7777,7 +7777,11 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
          <ref name="att.datable.w3c.attribute.from"/>
          <ref name="att.datable.w3c.attribute.to"/>
          <ref name="att.editLike.attributes"/>
-         <ref name="att.personal.attributes"/>
+         <ref name="att.personal.attribute.nymRef"/>
+         <ref name="att.personal.attribute.full"/>
+         <ref name="att.personal.attribute.sort"/>
+         <ref name="att.canonical.attribute.key"/>
+         <ref name="att.canonical.attribute.ref"/>
          <ref name="att.typed.attributes"/>
          <optional>
             <attribute name="cert">
@@ -7792,6 +7796,135 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
                   <value>unknown</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identification is speculative</a:documentation>
                </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="role">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">may be used to specify further information about the entity referenced by this name in the form of a set of whitespace-separated values, for example the occupation of a person, or the status of a place.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <choice>
+                        <value>alderman</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>ambassador</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>animalKeeper</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>baker</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>barber</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>blacksmith</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>brewer</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>butcher</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>carpenter</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>churchwarden</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>clericalWorker</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>clothWorker</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>commercialOffice</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">includes officers within guilds and companies</a:documentation>
+                        <value>cooper</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>deliveryPerson</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>draper</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>fletcher</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>gardener</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>glover</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>goldsmith</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>governmentalOffice</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">includes royal appointments, councillors, solicitor/attourneys general, etc.</a:documentation>
+                        <value>haberdasher</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>hospitality</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>ironmonger</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>instrumentMaker</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>judge</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>lawyer</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>legalOffice</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>manualLabourer</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>mason</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>masterRevels</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>mayor</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>medicalDoctor</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>memberParliament</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>mercer</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>merchant</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>merchantTaylor</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>messenger</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>metalWorker</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>musician</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>parishClerk</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>performanceOffice</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">includes bearwards, masters of game, directors of choirs, etc.</a:documentation>
+                        <value>performer</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>plumber</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>religiousOffice</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">includes abbots, cardinals, bishops, etc.</a:documentation>
+                        <value>salter</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>scrivener</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>servant</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>sexWorker</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>sheriff</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>singer</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>skinner</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>stationer</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>surveyor</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>tailor</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>transportationWorker</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>vintner</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>wait</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>writer</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     </choice>
+                  </oneOrMore>
+               </list>
             </attribute>
          </optional>
          <empty/>
@@ -7856,6 +7989,12 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
                <list>
                   <oneOrMore>
                      <choice>
+                        <value>alderman</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>ambassador</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>animalKeeper</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>baker</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>barber</value>
@@ -7868,9 +8007,17 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>carpenter</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>churchwarden</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>clericalWorker</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>clothWorker</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>commercialOffice</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">includes officers within guilds and companies</a:documentation>
                         <value>cooper</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>deliveryPerson</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>draper</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -7882,27 +8029,83 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>goldsmith</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>governmentalOffice</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">includes royal appointments, councillors, solicitor/attourneys general, etc.</a:documentation>
                         <value>haberdasher</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>hospitality</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>ironmonger</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>instrumentMaker</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>judge</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>lawyer</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>legalOffice</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>manualLabourer</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>mason</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>masterRevels</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>mayor</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>medicalDoctor</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>memberParliament</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>mercer</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>merchant</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>merchantTaylor</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>messenger</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>metalWorker</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>musician</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>parishClerk</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>performanceOffice</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">includes bearwards, masters of game, directors of choirs, etc.</a:documentation>
+                        <value>performer</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>plumber</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>religiousOffice</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">includes abbots, cardinals, bishops, etc.</a:documentation>
                         <value>salter</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>scrivener</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>servant</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>sexWorker</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>sheriff</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>singer</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>skinner</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>stationer</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>surveyor</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>tailor</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>transportationWorker</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>vintner</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>wait</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>writer</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      </choice>
                   </oneOrMore>
@@ -7984,8 +8187,12 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
          <ref name="att.global.analytic.attribute.ana"/>
          <ref name="att.global.facs.attribute.facs"/>
          <ref name="att.global.responsibility.attribute.resp"/>
-         <ref name="att.personal.attributes"/>
-         <ref name="att.typed.attributes"/>
+         <ref name="att.personal.attribute.nymRef"/>
+         <ref name="att.personal.attribute.full"/>
+         <ref name="att.personal.attribute.sort"/>
+         <ref name="att.canonical.attribute.key"/>
+         <ref name="att.canonical.attribute.ref"/>
+         <ref name="att.typed.attribute.subtype"/>
          <optional>
             <attribute name="cert">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(certainty) signifies the degree of certainty associated with the intervention or interpretation.</a:documentation>
@@ -7998,6 +8205,102 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">There is a low degree of certainty about this place</a:documentation>
                   <value>unknown</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The place is unknown</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="role">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">may be used to specify further information about the entity referenced by this name in the form of a set of whitespace-separated values, for example the occupation of a person, or the status of a place.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <choice>
+                        <value>placeCommerce</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>placeEducation</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>placeEntertainment</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>placeLegalActivity</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>placePunishment</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>placeReligiousActivity</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     </choice>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
+               <choice>
+                  <value>bar</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>gate</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>wall</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>building</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>monument</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>arena</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>garden</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>market</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>residence</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>room</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>bridge</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>road</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>street</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>stairs</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>hall</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>hospital</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>palace</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>prison</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>school</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>brothel</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>market</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>playhouse</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>shop</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>victuallingHouse</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>arena</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>innCourt</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>chapel</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>church</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>churchHouse</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>religiousHouse</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>bodyWater</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>hill</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>stairs</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                </choice>
             </attribute>
          </optional>
