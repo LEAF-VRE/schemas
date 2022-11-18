@@ -24,6 +24,7 @@
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
+      <change when="2022-11-18" who="#DKJ">Added placeName types and roles, added persName roles, added orgName roles (for collectives)</change>
       <change when="2022-11-02" who="RachelMilio">Added objectName types</change>
     	<change when="2021-08-07" who="#DKJ">Aligning schema with CWRC publlication</change>
       <change when="2020-07-26" who="#JC">Various minor updates to ODD over time, version 0.8</change>
@@ -675,7 +676,77 @@
         					</valItem>
         				</valList>
         			</attDef>
-        			
+        		  <attDef ident="role" mode="change">
+        		      <valList mode="add" type="closed">
+        		        <valItem ident="alderman" mode="add"/>
+        		        <valItem ident="ambassador" mode="add"/>
+        		        <valItem ident="animalKeeper" mode="add"/>
+        		        <valItem ident="baker" mode="add"/>
+        		        <valItem ident="barber" mode="add"/>
+        		        <valItem ident="blacksmith" mode="add"/>
+        		        <valItem ident="brewer" mode="add"/>
+        		        <valItem ident="butcher" mode="add"/>
+        		        <valItem ident="carpenter" mode="add"/>
+        		        <valItem ident="churchwarden" mode="add"/>
+        		        <valItem ident="clericalWorker" mode="add"/>
+        		        <valItem ident="clothWorker" mode="add"/>
+        		        <valItem ident="commercialOffice" mode="add">
+        		          <desc>includes officers within guilds and companies</desc>
+        		        </valItem>
+        		        <valItem ident="cooper" mode="add"/>
+        		        <valItem ident="deliveryPerson" mode="add"/>
+        		        <valItem ident="draper" mode="add"/>
+        		        <valItem ident="fletcher" mode="add"/>
+        		        <valItem ident="gardener" mode="add"/>
+        		        <valItem ident="glover" mode="add"/>
+        		        <valItem ident="goldsmith" mode="add"/>
+        		        <valItem ident="governmentalOffice" mode="add">
+        		          <desc>includes royal appointments, councillors, solicitor/attourneys general, etc.</desc>
+        		        </valItem>
+        		        <valItem ident="haberdasher" mode="add"/>
+        		        <valItem ident="hospitality" mode="add"/>
+        		        <valItem ident="ironmonger" mode="add"/>
+        		        <valItem ident="instrumentMaker" mode="add"/>
+        		        <valItem ident="judge" mode="add"/>
+        		        <valItem ident="lawyer" mode="add"/>
+        		        <valItem ident="legalOffice" mode="add"/>
+        		        <valItem ident="manualLabourer" mode="add"/>
+        		        <valItem ident="mason" mode="add"/>
+        		        <valItem ident="masterRevels" mode="add"/>
+        		        <valItem ident="mayor" mode="add"/>
+        		        <valItem ident="medicalDoctor" mode="add"/>
+        		        <valItem ident="memberParliament" mode="add"/>
+        		        <valItem ident="mercer" mode="add"/>
+        		        <valItem ident="merchant" mode="add"/>
+        		        <valItem ident="merchantTaylor" mode="add"/>
+        		        <valItem ident="messenger" mode="add"/>
+        		        <valItem ident="metalWorker" mode="add"/>
+        		        <valItem ident="musician" mode="add"/>
+        		        <valItem ident="parishClerk" mode="add"/>
+        		        <valItem ident="performanceOffice" mode="add">
+        		          <desc>includes bearwards, masters of game, directors of choirs, etc.</desc>
+        		        </valItem>
+        		        <valItem ident="performer" mode="add"/>
+        		        <valItem ident="plumber" mode="add"/>
+        		        <valItem ident="religiousOffice" mode="add">
+        		          <desc>includes abbots, cardinals, bishops, etc.</desc>
+        		        </valItem>
+        		        <valItem ident="salter" mode="add"/>
+        		        <valItem ident="scrivener" mode="add"/>
+        		        <valItem ident="servant" mode="add"/>
+        		        <valItem ident="sexWorker" mode="add"/>
+        		        <valItem ident="sheriff" mode="add"/>
+        		        <valItem ident="singer" mode="add"/>
+        		        <valItem ident="skinner" mode="add"/>
+        		        <valItem ident="stationer" mode="add"/>
+        		        <valItem ident="surveyor" mode="add"/>
+        		        <valItem ident="tailor" mode="add"/>
+        		        <valItem ident="transportationWorker" mode="add"/>
+        		        <valItem ident="vintner" mode="add"/>
+        		        <valItem ident="wait" mode="add"/>
+        		        <valItem ident="writer" mode="add"/>
+        		      </valList>
+        		  </attDef>        			
         			<attDef ident="calendar" mode="delete"/>
         			<attDef ident="when-iso" mode="delete"/>
         			<attDef ident="notBefore-iso" mode="delete"/>
@@ -712,31 +783,73 @@
           	  <!-- DKJ: beginning list of occupations/guilds as @roles to be tagged with persName -->
           	  <attDef ident="role" mode="change">
           	    <valList mode="add" type="closed">
+          	      <valItem ident="alderman" mode="add"/>
+          	      <valItem ident="ambassador" mode="add"/>
+          	      <valItem ident="animalKeeper" mode="add"/>
           	      <valItem ident="baker" mode="add"/>
           	      <valItem ident="barber" mode="add"/>
           	      <valItem ident="blacksmith" mode="add"/>
           	      <valItem ident="brewer" mode="add"/>
           	      <valItem ident="butcher" mode="add"/>
           	      <valItem ident="carpenter" mode="add"/>
+          	      <valItem ident="churchwarden" mode="add"/>
+          	      <valItem ident="clericalWorker" mode="add"/>
           	      <valItem ident="clothWorker" mode="add"/>
+          	      <valItem ident="commercialOffice" mode="add">
+          	        <desc>includes officers within guilds and companies</desc>
+          	      </valItem>
           	      <valItem ident="cooper" mode="add"/>
+          	      <valItem ident="deliveryPerson" mode="add"/>
           	      <valItem ident="draper" mode="add"/>
           	      <valItem ident="fletcher" mode="add"/>
           	      <valItem ident="gardener" mode="add"/>
           	      <valItem ident="glover" mode="add"/>
           	      <valItem ident="goldsmith" mode="add"/>
+          	      <valItem ident="governmentalOffice" mode="add">
+          	        <desc>includes royal appointments, councillors, solicitor/attourneys general, etc.</desc>
+          	      </valItem>
           	      <valItem ident="haberdasher" mode="add"/>
+          	      <valItem ident="hospitality" mode="add"/>
           	      <valItem ident="ironmonger" mode="add"/>
+          	      <valItem ident="instrumentMaker" mode="add"/>
+          	      <valItem ident="judge" mode="add"/>
+          	      <valItem ident="lawyer" mode="add"/>
+          	      <valItem ident="legalOffice" mode="add"/>
+          	      <valItem ident="manualLabourer" mode="add"/>
           	      <valItem ident="mason" mode="add"/>
+          	      <valItem ident="masterRevels" mode="add"/>
+          	      <valItem ident="mayor" mode="add"/>
+          	      <valItem ident="medicalDoctor" mode="add"/>
+          	      <valItem ident="memberParliament" mode="add"/>
           	      <valItem ident="mercer" mode="add"/>
+          	      <valItem ident="merchant" mode="add"/>
           	      <valItem ident="merchantTaylor" mode="add"/>
+          	      <valItem ident="messenger" mode="add"/>
+          	      <valItem ident="metalWorker" mode="add"/>
+          	      <valItem ident="musician" mode="add"/>
+          	      <valItem ident="parishClerk" mode="add"/>
+          	      <valItem ident="performanceOffice" mode="add">
+          	        <desc>includes bearwards, masters of game, directors of choirs, etc.</desc>
+          	      </valItem>
+          	      <valItem ident="performer" mode="add"/>
           	      <valItem ident="plumber" mode="add"/>
+          	      <valItem ident="religiousOffice" mode="add">
+          	        <desc>includes abbots, cardinals, bishops, etc.</desc>
+          	      </valItem>
           	      <valItem ident="salter" mode="add"/>
           	      <valItem ident="scrivener" mode="add"/>
+          	      <valItem ident="servant" mode="add"/>
+          	      <valItem ident="sexWorker" mode="add"/>
+          	      <valItem ident="sheriff" mode="add"/>
+          	      <valItem ident="singer" mode="add"/>
           	      <valItem ident="skinner" mode="add"/>
           	      <valItem ident="stationer" mode="add"/>
+          	      <valItem ident="surveyor" mode="add"/>
           	      <valItem ident="tailor" mode="add"/>
+          	      <valItem ident="transportationWorker" mode="add"/>
           	      <valItem ident="vintner" mode="add"/>
+          	      <valItem ident="wait" mode="add"/>
+          	      <valItem ident="writer" mode="add"/>
           	    </valList>
           	  </attDef>
           		<attDef ident="calendar" mode="delete"/>
@@ -771,6 +884,53 @@
                   <valItem ident="unknown">
                     <desc>The place is unknown</desc>
                   </valItem>
+                </valList>
+              </attDef>
+              <attDef ident="type" mode="change">
+                <valList mode="add" type="closed">
+                  <valItem ident="bar" mode="add"/>
+                  <valItem ident="gate" mode="add"/>
+                  <valItem ident="wall" mode="add"/>
+                  <valItem ident="building" mode="add"/>
+                  <valItem ident="monument" mode="add"/>
+                  <valItem ident="arena" mode="add"/>
+                  <valItem ident="garden" mode="add"/>
+                  <valItem ident="market" mode="add"/>
+                  <valItem ident="residence" mode="add"/>
+                  <valItem ident="room" mode="add"/>
+                  <valItem ident="bridge" mode="add"/> 
+                  <valItem ident="road" mode="add"/>
+                  <valItem ident="street" mode="add"/>
+                  <valItem ident="stairs" mode="add"/>
+                  <valItem ident="hall" mode="add"/>
+                  <valItem ident="hospital" mode="add"/>
+                  <valItem ident="palace" mode="add"/>
+                  <valItem ident="prison" mode="add"/>
+                  <valItem ident="school" mode="add"/>
+                  <valItem ident="brothel" mode="add"/>
+                  <valItem ident="market" mode="add"/>
+                  <valItem ident="playhouse" mode="add"/>
+                  <valItem ident="shop" mode="add"/>
+                  <valItem ident="victuallingHouse" mode="add"/>
+                  <valItem ident="arena" mode="add"/>
+                  <valItem ident="innCourt" mode="add"/>
+                  <valItem ident="chapel" mode="add"/>
+                  <valItem ident="church" mode="add"/>
+                  <valItem ident="churchHouse" mode="add"/>
+                  <valItem ident="religiousHouse" mode="add"/>
+                  <valItem ident="bodyWater" mode="add"/>
+                  <valItem ident="hill" mode="add"/>
+                  <valItem ident="stairs" mode="add"/>
+                </valList>
+              </attDef>
+              <attDef ident="role" mode="change">
+                <valList mode="add" type="closed">
+                  <valItem ident="placeCommerce" mode="add"/>
+                  <valItem ident="placeEducation" mode="add"/>
+                  <valItem ident="placeEntertainment" mode="add"/>
+                  <valItem ident="placeLegalActivity" mode="add"/>
+                  <valItem ident="placePunishment" mode="add"/>
+                  <valItem ident="placeReligiousActivity"/>
                 </valList>
               </attDef>
               <attDef ident="calendar" mode="delete"/>
