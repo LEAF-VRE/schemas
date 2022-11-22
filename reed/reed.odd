@@ -891,49 +891,58 @@
               </attDef>
               <attDef ident="type" mode="change">
                 <valList mode="add" type="closed">
-                  <valItem ident="bar" mode="add"/>
-                  <valItem ident="gate" mode="add"/>
-                  <valItem ident="wall" mode="add"/>
-                  <valItem ident="building" mode="add"/>
-                  <valItem ident="monument" mode="add"/>
-                  <valItem ident="arena" mode="add"/>
-                  <valItem ident="garden" mode="add"/>
-                  <valItem ident="market" mode="add"/>
-                  <valItem ident="residence" mode="add"/>
-                  <valItem ident="room" mode="add"/>
-                  <valItem ident="bridge" mode="add"/> 
-                  <valItem ident="road" mode="add"/>
-                  <valItem ident="street" mode="add"/>
-                  <valItem ident="stairs" mode="add"/>
-                  <valItem ident="hall" mode="add"/>
-                  <valItem ident="hospital" mode="add"/>
-                  <valItem ident="palace" mode="add"/>
-                  <valItem ident="prison" mode="add"/>
-                  <valItem ident="school" mode="add"/>
-                  <valItem ident="brothel" mode="add"/>
-                  <valItem ident="market" mode="add"/>
-                  <valItem ident="playhouse" mode="add"/>
-                  <valItem ident="shop" mode="add"/>
-                  <valItem ident="victuallingHouse" mode="add"/>
-                  <valItem ident="arena" mode="add"/>
-                  <valItem ident="innCourt" mode="add"/>
-                  <valItem ident="chapel" mode="add"/>
-                  <valItem ident="church" mode="add"/>
-                  <valItem ident="churchHouse" mode="add"/>
-                  <valItem ident="religiousHouse" mode="add"/>
-                  <valItem ident="bodyWater" mode="add"/>
-                  <valItem ident="hill" mode="add"/>
-                  <valItem ident="stairs" mode="add"/>
+                  <valItem ident="arena" mode="add" sameAs="https://id.lincsproject.ca/eml#Arena"/>
+                  <valItem ident="bar" mode="add" sameAs="https://id.lincsproject.ca/eml#Bar"/>
+                  <valItem ident="barrier" mode="add" sameAs="https://id.lincsproject.ca/eml#Barrier"/>
+                  <valItem ident="bodyOfWater" mode="add" sameAs="https://id.lincsproject.ca/eml#BodyOfWater"/>
+                  <valItem ident="bookshop" mode="add" sameAs="https://id.lincsproject.ca/eml#Bookshop"/>
+                  <valItem ident="bridge" mode="add" sameAs="https://id.lincsproject.ca/eml#Bridge"/> 
+                  <valItem ident="brothel" mode="add" sameAs="https://id.lincsproject.ca/eml#Brothel"/>
+                  <valItem ident="building" mode="add" sameAs="https://id.lincsproject.ca/eml#Building"/>
+                  <valItem ident="chapel" mode="add" sameAs="https://id.lincsproject.ca/eml#Chapel"/>
+                  <valItem ident="church" mode="add" sameAs="https://id.lincsproject.ca/eml#Church"/>
+                  <valItem ident="churchHouse" mode="add" sameAs="https://id.lincsproject.ca/eml#ChurchHouse" />
+                  <valItem ident="diocese" mode="add" sameAs="https://id.lincsproject.ca/eml#Dioocese"/>
+                  <valItem ident="garden" mode="add" sameAs="https://id.lincsproject.ca/eml#Garden"/>
+                  <valItem ident="gate" mode="add" sameAs="https://id.lincsproject.ca/eml#Gate"/>
+                  <valItem ident="hall" mode="add" sameAs="https://id.lincsproject.ca/eml#Hall"/>
+                  <valItem ident="hill" mode="add" sameAs="https://id.lincsproject.ca/eml#Hill"/>
+                  <valItem ident="hospital" mode="add" sameAs="https://id.lincsproject.ca/eml#Hospital"/>
+                  <valItem ident="innCourt" mode="add" sameAs="https://id.lincsproject.ca/eml#InnOfCourt"/>
+                  <valItem ident="institution" mode="add" sameAs="https://id.lincsproject.ca/eml#Institution"/>
+                  <valItem ident="landFeature" mode="add" sameAs="https://id.lincsproject.ca/eml#LandFeature"/>
+                  <valItem ident="liberty" mode="add" sameAs="https://id.lincsproject.ca/eml#Liberty"/>
+                  <valItem ident="manor" mode="add" sameAs="https://id.lincsproject.ca/eml#Manor"/>
+                  <valItem ident="market" mode="add" sameAs="https://id.lincsproject.ca/eml#Market"/>                  
+                  <valItem ident="monument" mode="add" sameAs="https://id.lincsproject.ca/eml#Monument"/>
+                  <valItem ident="neighbourhood" mode="add" sameAs="https://id.lincsproject.ca/eml#Neighbourhood"/>
+                  <valItem ident="outdoorSpace" mode="add" sameAs="https://id.lincsproject.ca/eml#OutdoorSpace"/>
+                  <valItem ident="palace" mode="add" sameAs="https://id.lincsproject.ca/eml#Palace"/>
+                  <valItem ident="parish" mode="add" sameAs="https://id.lincsproject.ca/eml#Parish"/>
+                  <valItem ident="playhouse" mode="add" sameAs="https://id.lincsproject.ca/eml#Playhouse"/>
+                  <valItem ident="prison" mode="add" sameAs="https://id.lincsproject.ca/eml#Prison"/>
+                  <valItem ident="religiousHouse" mode="add" sameAs="https://id.lincsproject.ca/eml#ReligiousHouse"/>
+                  <valItem ident="residence" mode="add" sameAs="https://id.lincsproject.ca/eml#Residence"/>
+                  <valItem ident="riversideFeature" mode="add" sameAs="https://id.lincsproject.ca/eml#RiversideFeature"/>
+                  <valItem ident="road" mode="add" sameAs="https://id.lincsproject.ca/eml#Road"/>
+                  <valItem ident="room" mode="add" sameAs="https://id.lincsproject.ca/eml#Room"/>
+                  <valItem ident="school" mode="add" sameAs="https://id.lincsproject.ca/eml#School"/>
+                  <valItem ident="shop" mode="add" sameAs="https://id.lincsproject.ca/eml#Shop"/>
+                  <valItem ident="stairs" mode="add" sameAs="https://id.lincsproject.ca/eml#Stairs"/>
+                  <valItem ident="street" mode="add" sameAs="https://id.lincsproject.ca/eml#Street"/>
+                  <valItem ident="victuallingHouse" mode="add" sameAs="https://id.lincsproject.ca/eml#VictuallingHouse"/>
+                  <valItem ident="wall" mode="add" sameAs="https://id.lincsproject.ca/eml#Wall"/>
+                  <valItem ident="ward" mode="add" sameAs="https://id.lincsproject.ca/eml#Ward"/>
                 </valList>
               </attDef>
               <attDef ident="role" mode="change">
                 <valList mode="add" type="closed">
-                  <valItem ident="placeCommerce" mode="add"/>
-                  <valItem ident="placeEducation" mode="add"/>
-                  <valItem ident="placeEntertainment" mode="add"/>
-                  <valItem ident="placeLegalActivity" mode="add"/>
-                  <valItem ident="placePunishment" mode="add"/>
-                  <valItem ident="placeReligiousActivity"/>
+                  <valItem ident="placeCommerce" mode="add" sameAs="https://id.lincsproject.ca/eml#PlaceOfCommerce"/>
+                  <valItem ident="placeEducation" mode="add" sameAs="https://id.lincsproject.ca/eml#PlaceOfEducation"/>
+                  <valItem ident="placeEntertainment" mode="add" sameAs="https://id.lincsproject.ca/eml#PlaceOfEntertainment"/>
+                  <valItem ident="placeLegalActivity" mode="add" sameAs="https://id.lincsproject.ca/eml#PlaceOfLegalActivity" />
+                  <valItem ident="placePunishment" mode="add" sameAs="https://id.lincsproject.ca/eml#PlaceOfPunishment"/>
+                  <valItem ident="placeReligiousActivity" sameAs="https://id.lincsproject.ca/eml#PlaceOfReligiousActivity"/>
                 </valList>
               </attDef>
               <attDef ident="calendar" mode="delete"/>
