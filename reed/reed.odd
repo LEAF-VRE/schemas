@@ -333,6 +333,9 @@
                   <valItem ident="translation">
                     <desc>This is the original language in which the record was transcribed</desc>
                   </valItem>
+                  <valItem ident="event">
+                    <desc>This provides a summary of an event or events described in the record</desc>
+                  </valItem>
                 </valList>
               </attDef>
             </attList>
