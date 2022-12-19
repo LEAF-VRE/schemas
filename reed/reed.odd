@@ -168,32 +168,6 @@
               <attDef ident="extent" mode="delete"/>
               <attDef ident="scope" mode="delete"/>
               <attDef ident="source" mode="delete"/>
-              <!-- These @type changes are for experimentation in CWRC -->
-              <attDef ident="type" mode="change">
-                <valList mode="add" type="closed">
-                  <valItem ident="occupation">
-                    <desc>Describes a categorical occupation, either individually or
-                      collectively</desc>
-                  </valItem>
-                  <valItem ident="object">
-                    <desc>Describes a categorical object (for example 'food', 'drink',
-                      'animal')</desc>
-                  </valItem>
-                  <valItem ident="entertainment">
-                    <desc>Describes a categorical entertainment (for example: 'play', 'masque',
-                      'oration')</desc>
-                  </valItem>
-                  <valItem ident="holiday">
-                    <desc>Describes a holiday</desc>
-                  </valItem>
-                  <valItem ident="character">
-                    <desc>Describes a character</desc>
-                  </valItem>
-                  <valItem ident="event">
-                    <desc>Describes an event</desc>
-                  </valItem>
-                </valList>
-              </attDef>
             </attList>
           </elementSpec>
           
@@ -655,9 +629,8 @@
           <!-- delete att.msExcerpt -->
           <classSpec ident="att.msExcerpt" module="msdescription" type="atts" mode="delete"/>
           
-          <!-- namesdates: only include event, listEvent, orgName, persName, placeName, objectName, occupation, roleName, and settlement. Not doing metadata records for named entities...yet-->
-          <moduleRef key="namesdates"
-          	include="event listEvent orgName persName place placeName roleName settlement occupation forename surname genName addName name objectName"/>
+          <!-- namesdates: only include event, listEvent, orgName, persName, placeName, objectName, occupation, roleName, and settlement. Not doing metadata records for named entities...yet include="event listEvent orgName persName place placeName roleName settlement occupation forename surname genName addName name objectName-->
+          <moduleRef key="namesdates"/>
           
           <!-- delete lots of attributes -->
 
