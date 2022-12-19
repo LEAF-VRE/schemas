@@ -24,6 +24,7 @@
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
+      <change when="2022-12-19" who="#DKJ">Added event, listEvent, and roleName to namesdates module</change>
       <change when="2022-11-18" who="#DKJ">Added placeName types and roles, added persName roles, added orgName roles (for collectives)</change>
       <change when="2022-11-02" who="RachelMilio">Added objectName types</change>
     	<change when="2021-08-07" who="#DKJ">Aligning schema with CWRC publlication</change>
@@ -654,9 +655,9 @@
           <!-- delete att.msExcerpt -->
           <classSpec ident="att.msExcerpt" module="msdescription" type="atts" mode="delete"/>
           
-          <!-- namesdates: only include orgName, persName, placeName, objectName, occupation, and settlement. Not doing metadata records for named entities...yet-->
+          <!-- namesdates: only include event, listEvent, orgName, persName, placeName, objectName, occupation, roleName, and settlement. Not doing metadata records for named entities...yet-->
           <moduleRef key="namesdates"
-          	include="orgName persName place placeName settlement occupation forename surname genName addName name objectName"/>
+          	include="event listEvent orgName persName place placeName roleName settlement occupation forename surname genName addName name objectName"/>
           
           <!-- delete lots of attributes -->
 
