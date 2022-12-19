@@ -24,11 +24,14 @@
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
-      <change when="2022-12-19" who="#DKJ">Added event, listEvent, and roleName to namesdates module</change>
-      <change when="2022-11-18" who="#DKJ">Added placeName types and roles, added persName roles, added orgName roles (for collectives)</change>
+      <change when="2022-12-19" who="#DKJ">Added event, listEvent, and roleName to namesdates
+        module</change>
+      <change when="2022-11-18" who="#DKJ">Added placeName types and roles, added persName roles,
+        added orgName roles (for collectives)</change>
       <change when="2022-11-02" who="RachelMilio">Added objectName types</change>
-    	<change when="2021-08-07" who="#DKJ">Aligning schema with CWRC publlication</change>
-      <change when="2020-07-26" who="#JC">Various minor updates to ODD over time, version 0.8</change>
+      <change when="2021-08-07" who="#DKJ">Aligning schema with CWRC publlication</change>
+      <change when="2020-07-26" who="#JC">Various minor updates to ODD over time, version
+        0.8</change>
       <change when="2018-07-11" who="#JC">Minor updates to ODD, version 0.5</change>
       <change when="2018-07-11" who="#DKJ">Revision of ODD to version 0.4</change>
       <change when="2016-08-07" who="#JC">Revision of ODD to version 0.3</change>
@@ -53,7 +56,7 @@
             date del desc editor expan foreign gap graphic gloss head hi idno imprint item label l lb lg list listBibl 
             measure milestone monogr name note orig p pb ptr pubPlace  publisher quote 
             ref reg relatedItem resp respStmt rs sic sp speaker stage term textLang title unclear"/>
-          
+
           <!-- added 'erasure' to del/@type as per request -->
           <elementSpec ident="del" mode="change" module="core">
             <attList>
@@ -70,14 +73,14 @@
               </attDef>
             </attList>
           </elementSpec>
-          
+
           <!-- abbr: deleted @type from abbr as per request-->
           <elementSpec ident="abbr" mode="change" module="core">
             <attList>
               <attDef ident="type" mode="delete"/>
             </attList>
           </elementSpec>
-          
+
           <!-- gap: removed previously-used agents  -->
           <elementSpec ident="gap" mode="change" module="core">
             <attList>
@@ -107,7 +110,7 @@
               </attDef>
             </attList>
           </elementSpec>
-          
+
           <!-- add:  -->
           <elementSpec ident="add" mode="change" module="core">
             <attList>
@@ -152,7 +155,7 @@
               </attDef>
             </attList>
           </elementSpec>
-          
+
           <!-- Name: delete lots of attributes -->
           <elementSpec ident="name" mode="change" module="core">
             <attList>
@@ -170,7 +173,7 @@
               <attDef ident="source" mode="delete"/>
             </attList>
           </elementSpec>
-          
+
           <!-- date: modify @type added by DJ-->
           <elementSpec ident="date" mode="change" module="core">
             <attList>
@@ -309,7 +312,8 @@
                     <desc>This is the original language in which the record was transcribed</desc>
                   </valItem>
                   <valItem ident="event">
-                    <desc>This provides a summary of an event or events described in the record</desc>
+                    <desc>This provides a summary of an event or events described in the
+                      record</desc>
                   </valItem>
                 </valList>
               </attDef>
@@ -415,17 +419,17 @@
               </attDef>
             </attList>
           </elementSpec>
-          
+
           <moduleRef key="corpus" include="settingDesc"/>
           <!-- dictionaries -->
           <!-- added for glossary work -->
           <moduleRef key="dictionaries"
             include="entry form case orth hyph pron gram gramGrp def colloc etym gen hom 
             lang mood number per pos re sense tns syll usg xr "/>
-          
+
           <!-- figures -->
           <moduleRef key="figures" include="cell row table figure figDesc"/>
-          
+
           <!-- header module -->
           <!-- xenodata needed by REED:London for mods crosswalk -->
           <moduleRef key="header"
@@ -435,7 +439,7 @@
             prefixDef profileDesc projectDesc publicationStmt publisher 
             refsDecl revisionDesc seriesStmt sourceDesc 
             tagUsage tagsDecl taxonomy teiHeader titleStmt title xenoData"/>
-          
+
           <!-- idno: @type -->
           <elementSpec ident="idno" mode="change" module="header">
             <attList>
@@ -464,14 +468,15 @@
                     <desc>This idno is other ID number. (If you use this more than a handful of
                       times we should update the TEI ODD Customisation.)</desc>
                   </valItem>
-                	<valItem ident="ISBN">
-                		<desc>ISBN number</desc><!-- added because Carolyn Black used in the RLO header -->
-                	</valItem>
+                  <valItem ident="ISBN">
+                    <desc>ISBN number</desc>
+                    <!-- added because Carolyn Black used in the RLO header -->
+                  </valItem>
                 </valList>
               </attDef>
             </attList>
           </elementSpec>
-          
+
           <!-- licence delete some attributes -->
           <elementSpec ident="licence" mode="change" module="header">
             <attList>
@@ -547,7 +552,7 @@
               </attDef>
             </attList>
           </elementSpec>
-          
+
           <!-- seg: type -->
           <elementSpec ident="seg" mode="change" module="linking">
             <attList>
@@ -562,7 +567,7 @@
               <attDef ident="source" mode="delete"/>
             </attList>
           </elementSpec>
-          
+
           <!-- delete various att.global.linking attributes-->
           <classSpec ident="att.global.linking" module="linking" type="atts" mode="change">
             <attList>
@@ -572,7 +577,7 @@
               <attDef ident="select" mode="delete"/>
             </attList>
           </classSpec>
-          
+
           <!-- CWRC requires @key for persName -->
           <!-- never use @key, use @ref and documented private URIs instead  
           <classSpec ident="att.canonical" module="tei" type="atts" mode="change">
@@ -580,7 +585,7 @@
               <attDef ident="key" mode="delete"/>
             </attList>
           </classSpec>-->
-          
+
           <!-- Include all of msdescription -->
           <moduleRef key="msdescription"/>
           <!-- Commented out since this is now solved by https://github.com/TEIC/TEI/issues/1597 -->
@@ -594,7 +599,7 @@
             </content>
           </elementSpec>-->
           <!-- origDate: delete lots of attributes -->
-          
+
           <elementSpec ident="origDate" mode="change" module="msdescription">
             <attList>
               <attDef ident="calendar" mode="delete"/>
@@ -609,7 +614,7 @@
               <attDef ident="scope" mode="delete"/>
             </attList>
           </elementSpec>
-          
+
           <!-- origin: delete lots of attributes -->
           <elementSpec ident="origin" mode="change" module="msdescription">
             <attList>
@@ -625,225 +630,247 @@
               <attDef ident="to-iso" mode="delete"/>
             </attList>
           </elementSpec>
-          
+
           <!-- delete att.msExcerpt -->
           <classSpec ident="att.msExcerpt" module="msdescription" type="atts" mode="delete"/>
-          
-          <!-- namesdates: only include event, listEvent, orgName, persName, placeName, objectName, occupation, roleName, and settlement. Not doing metadata records for named entities...yet include="event listEvent orgName persName place placeName roleName settlement occupation forename surname genName addName name objectName-->
-          <moduleRef key="namesdates"/>
-          
+
+          <!-- namesdates: including lots of elements-->
+          <moduleRef key="namesdates"
+            include="persName surname forename roleName addName genName placeName geogName state trait event listEvent idno relation listRelation orgName objectName person place settlement occupation name affiliation"/>
+
           <!-- delete lots of attributes -->
 
-        	<!-- orgName: modify @cert (removed original REED definite/reasonably certain, probable, speculative to align with CWRC)-->
-        	<elementSpec ident="orgName" mode="change" module="namesdates">
-        		<attList>
-        			<attDef ident="cert" mode="change">
-        				<valList mode="add" type="closed">
-        					<valItem ident="high">
-        						<desc>There is a high degree of certainty about this organization</desc>
-        					</valItem>
-        					<valItem ident="moderate">
-        						<desc>There is a moderate degree of certainty about this organization</desc>
-        					</valItem>
-        					<valItem ident="low">
-        						<desc>There is a low degree of certainty about this organization</desc>
-        					</valItem>
-        					<valItem ident="unknown">
-        						<desc>Identification is speculative</desc>
-        					</valItem>
-        				</valList>
-        			</attDef>
-        		  <attDef ident="role" mode="change">
-        		      <valList mode="add" type="closed">
-        		        <valItem ident="alderman" mode="add"/>
-        		        <valItem ident="ambassador" mode="add"/>
-        		        <valItem ident="animalKeeper" mode="add"/>
-        		        <valItem ident="baker" mode="add"/>
-        		        <valItem ident="barber" mode="add"/>
-        		        <valItem ident="blacksmith" mode="add"/>
-        		        <valItem ident="brewer" mode="add"/>
-        		        <valItem ident="butcher" mode="add"/>
-        		        <valItem ident="carpenter" mode="add"/>
-        		        <valItem ident="churchwarden" mode="add"/>
-        		        <valItem ident="clericalWorker" mode="add"/>
-        		        <valItem ident="clothWorker" mode="add"/>
-        		        <valItem ident="commercialOffice" mode="add">
-        		          <desc>includes officers within guilds and companies</desc>
-        		        </valItem>
-        		        <valItem ident="cooper" mode="add"/>
-        		        <valItem ident="deliveryPerson" mode="add"/>
-        		        <valItem ident="draper" mode="add"/>
-        		        <valItem ident="fletcher" mode="add"/>
-        		        <valItem ident="gardener" mode="add"/>
-        		        <valItem ident="glover" mode="add"/>
-        		        <valItem ident="goldsmith" mode="add"/>
-        		        <valItem ident="governmentalOffice" mode="add">
-        		          <desc>includes royal appointments, councillors, solicitor/attourneys general, etc.</desc>
-        		        </valItem>
-        		        <valItem ident="haberdasher" mode="add"/>
-        		        <valItem ident="hospitality" mode="add"/>
-        		        <valItem ident="ironmonger" mode="add"/>
-        		        <valItem ident="instrumentMaker" mode="add"/>
-        		        <valItem ident="judge" mode="add"/>
-        		        <valItem ident="lawyer" mode="add"/>
-        		        <valItem ident="legalOffice" mode="add"/>
-        		        <valItem ident="manualLabourer" mode="add"/>
-        		        <valItem ident="mason" mode="add"/>
-        		        <valItem ident="masterRevels" mode="add"/>
-        		        <valItem ident="mayor" mode="add"/>
-        		        <valItem ident="medicalDoctor" mode="add"/>
-        		        <valItem ident="memberParliament" mode="add"/>
-        		        <valItem ident="mercer" mode="add"/>
-        		        <valItem ident="merchant" mode="add"/>
-        		        <valItem ident="merchantTaylor" mode="add"/>
-        		        <valItem ident="messenger" mode="add"/>
-        		        <valItem ident="metalWorker" mode="add"/>
-        		        <valItem ident="musician" mode="add"/>
-        		        <valItem ident="parishClerk" mode="add"/>
-        		        <valItem ident="performanceOffice" mode="add">
-        		          <desc>includes bearwards, masters of game, directors of choirs, etc.</desc>
-        		        </valItem>
-        		        <valItem ident="performer" mode="add"/>
-        		        <valItem ident="plumber" mode="add"/>
-        		        <valItem ident="religiousOffice" mode="add">
-        		          <desc>includes abbots, cardinals, bishops, etc.</desc>
-        		        </valItem>
-        		        <valItem ident="salter" mode="add"/>
-        		        <valItem ident="scrivener" mode="add"/>
-        		        <valItem ident="servant" mode="add"/>
-        		        <valItem ident="sexWorker" mode="add"/>
-        		        <valItem ident="sheriff" mode="add"/>
-        		        <valItem ident="singer" mode="add"/>
-        		        <valItem ident="skinner" mode="add"/>
-        		        <valItem ident="stationer" mode="add"/>
-        		        <valItem ident="surveyor" mode="add"/>
-        		        <valItem ident="tailor" mode="add"/>
-        		        <valItem ident="transportationWorker" mode="add"/>
-        		        <valItem ident="vintner" mode="add"/>
-        		        <valItem ident="wait" mode="add"/>
-        		        <valItem ident="writer" mode="add"/>
-        		      </valList>
-        		  </attDef>        			
-        			<attDef ident="calendar" mode="delete"/>
-        			<attDef ident="when-iso" mode="delete"/>
-        			<attDef ident="notBefore-iso" mode="delete"/>
-        			<attDef ident="notAfter-iso" mode="delete"/>
-        			<attDef ident="from-iso" mode="delete"/>
-        			<attDef ident="to-iso" mode="delete"/>
-        			<attDef ident="unit" mode="delete"/>
-        			<attDef ident="quantity" mode="delete"/>
-        			<attDef ident="extent" mode="delete"/>
-        			<attDef ident="scope" mode="delete"/>
-        			<attDef ident="source" mode="delete"/>
-        		</attList>
-        	</elementSpec>        
-        	
-        	<!-- persName: modify @cert for CWRC added by DJ (removed original REED definite/reasonably certain, probable, speculative to align with CWRC)-->
-          <elementSpec ident="persName" mode="change" module="namesdates">
-          	<attList>
-          		<attDef ident="cert" mode="change">
-          			<valList mode="add" type="closed">
-          				<valItem ident="high">
-          					<desc>There is a high degree of certainty about this person</desc>
-          				</valItem>
-          				<valItem ident="moderate">
-          					<desc>There is a moderate degree of certainty about this person</desc>
-          				</valItem>
-          				<valItem ident="low">
-          					<desc>There is a low degree of certainty about this person</desc>
-          				</valItem>
-          				<valItem ident="unknown">
-          					<desc>The person is unknown</desc>
-          				</valItem>
-          			</valList>
-          		</attDef>
-          	  <!-- DKJ: beginning list of occupations/guilds as @roles to be tagged with persName -->
-          	  <attDef ident="role" mode="change">
-          	    <valList mode="add" type="closed">
-          	      <valItem ident="alderman" mode="add"/>
-          	      <valItem ident="ambassador" mode="add"/>
-          	      <valItem ident="animalKeeper" mode="add"/>
-          	      <valItem ident="baker" mode="add"/>
-          	      <valItem ident="barber" mode="add"/>
-          	      <valItem ident="blacksmith" mode="add"/>
-          	      <valItem ident="brewer" mode="add"/>
-          	      <valItem ident="butcher" mode="add"/>
-          	      <valItem ident="carpenter" mode="add"/>
-          	      <valItem ident="churchwarden" mode="add"/>
-          	      <valItem ident="clericalWorker" mode="add"/>
-          	      <valItem ident="clothWorker" mode="add"/>
-          	      <valItem ident="commercialOffice" mode="add">
-          	        <desc>includes officers within guilds and companies</desc>
-          	      </valItem>
-          	      <valItem ident="cooper" mode="add"/>
-          	      <valItem ident="deliveryPerson" mode="add"/>
-          	      <valItem ident="draper" mode="add"/>
-          	      <valItem ident="fletcher" mode="add"/>
-          	      <valItem ident="gardener" mode="add"/>
-          	      <valItem ident="glover" mode="add"/>
-          	      <valItem ident="goldsmith" mode="add"/>
-          	      <valItem ident="governmentalOffice" mode="add">
-          	        <desc>includes royal appointments, councillors, solicitor/attourneys general, etc.</desc>
-          	      </valItem>
-          	      <valItem ident="haberdasher" mode="add"/>
-          	      <valItem ident="hospitality" mode="add"/>
-          	      <valItem ident="ironmonger" mode="add"/>
-          	      <valItem ident="instrumentMaker" mode="add"/>
-          	      <valItem ident="judge" mode="add"/>
-          	      <valItem ident="lawyer" mode="add"/>
-          	      <valItem ident="legalOffice" mode="add"/>
-          	      <valItem ident="manualLabourer" mode="add"/>
-          	      <valItem ident="mason" mode="add"/>
-          	      <valItem ident="masterRevels" mode="add"/>
-          	      <valItem ident="mayor" mode="add"/>
-          	      <valItem ident="medicalDoctor" mode="add"/>
-          	      <valItem ident="memberParliament" mode="add"/>
-          	      <valItem ident="mercer" mode="add"/>
-          	      <valItem ident="merchant" mode="add"/>
-          	      <valItem ident="merchantTaylor" mode="add"/>
-          	      <valItem ident="messenger" mode="add"/>
-          	      <valItem ident="metalWorker" mode="add"/>
-          	      <valItem ident="musician" mode="add"/>
-          	      <valItem ident="parishClerk" mode="add"/>
-          	      <valItem ident="performanceOffice" mode="add">
-          	        <desc>includes bearwards, masters of game, directors of choirs, etc.</desc>
-          	      </valItem>
-          	      <valItem ident="performer" mode="add"/>
-          	      <valItem ident="plumber" mode="add"/>
-          	      <valItem ident="religiousOffice" mode="add">
-          	        <desc>includes abbots, cardinals, bishops, etc.</desc>
-          	      </valItem>
-          	      <valItem ident="salter" mode="add"/>
-          	      <valItem ident="scrivener" mode="add"/>
-          	      <valItem ident="servant" mode="add"/>
-          	      <valItem ident="sexWorker" mode="add"/>
-          	      <valItem ident="sheriff" mode="add"/>
-          	      <valItem ident="singer" mode="add"/>
-          	      <valItem ident="skinner" mode="add"/>
-          	      <valItem ident="stationer" mode="add"/>
-          	      <valItem ident="surveyor" mode="add"/>
-          	      <valItem ident="tailor" mode="add"/>
-          	      <valItem ident="transportationWorker" mode="add"/>
-          	      <valItem ident="vintner" mode="add"/>
-          	      <valItem ident="wait" mode="add"/>
-          	      <valItem ident="writer" mode="add"/>
-          	    </valList>
-          	  </attDef>
-          		<attDef ident="calendar" mode="delete"/>
-          		<attDef ident="when-iso" mode="delete"/>
-          		<attDef ident="notBefore-iso" mode="delete"/>
-          		<attDef ident="notAfter-iso" mode="delete"/>
-          		<attDef ident="from-iso" mode="delete"/>
-          		<attDef ident="to-iso" mode="delete"/>
-          		<attDef ident="unit" mode="delete"/>
-          		<attDef ident="quantity" mode="delete"/>
-          		<attDef ident="extent" mode="delete"/>
-          		<attDef ident="scope" mode="delete"/>
-          		<attDef ident="source" mode="delete"/>
-          	</attList>
-            
+          <!-- event: modify @type to include category from CWRC -->
+          <elementSpec ident="event" mode="change" module="namesdates">
+            <attList>
+              <attDef ident="type" mode="change">
+                <valList mode="add" type="closed">
+                  <valItem ident="bibliographical" mode="add"/>
+                  <valItem ident="biographical" mode="add"/>
+                  <valItem ident="cultural" mode="add"/>
+                  <valItem ident="environmental" mode="add"/>
+                  <valItem ident="financial" mode="add"/>
+                  <valItem ident="legal" mode="add"/>
+                  <valItem ident="literary" mode="add"/>
+                  <valItem ident="political" mode="add"/>
+                  <valItem ident="religious" mode="add"/>
+                  <valItem ident="social" mode="add"/>
+                </valList>
+              </attDef>
+            </attList>
           </elementSpec>
-        	
+          <!-- orgName: modify @cert (removed original REED definite/reasonably certain, probable, speculative to align with CWRC)-->
+          <elementSpec ident="orgName" mode="change" module="namesdates">
+            <attList>
+              <attDef ident="cert" mode="change">
+                <valList mode="add" type="closed">
+                  <valItem ident="high">
+                    <desc>There is a high degree of certainty about this organization</desc>
+                  </valItem>
+                  <valItem ident="moderate">
+                    <desc>There is a moderate degree of certainty about this organization</desc>
+                  </valItem>
+                  <valItem ident="low">
+                    <desc>There is a low degree of certainty about this organization</desc>
+                  </valItem>
+                  <valItem ident="unknown">
+                    <desc>Identification is speculative</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+              <attDef ident="role" mode="change">
+                <valList mode="add" type="closed">
+                  <valItem ident="alderman" mode="add"/>
+                  <valItem ident="ambassador" mode="add"/>
+                  <valItem ident="animalKeeper" mode="add"/>
+                  <valItem ident="baker" mode="add"/>
+                  <valItem ident="barber" mode="add"/>
+                  <valItem ident="blacksmith" mode="add"/>
+                  <valItem ident="brewer" mode="add"/>
+                  <valItem ident="butcher" mode="add"/>
+                  <valItem ident="carpenter" mode="add"/>
+                  <valItem ident="churchwarden" mode="add"/>
+                  <valItem ident="clericalWorker" mode="add"/>
+                  <valItem ident="clothWorker" mode="add"/>
+                  <valItem ident="commercialOffice" mode="add">
+                    <desc>includes officers within guilds and companies</desc>
+                  </valItem>
+                  <valItem ident="cooper" mode="add"/>
+                  <valItem ident="deliveryPerson" mode="add"/>
+                  <valItem ident="draper" mode="add"/>
+                  <valItem ident="fletcher" mode="add"/>
+                  <valItem ident="gardener" mode="add"/>
+                  <valItem ident="glover" mode="add"/>
+                  <valItem ident="goldsmith" mode="add"/>
+                  <valItem ident="governmentalOffice" mode="add">
+                    <desc>includes royal appointments, councillors, solicitor/attourneys general,
+                      etc.</desc>
+                  </valItem>
+                  <valItem ident="haberdasher" mode="add"/>
+                  <valItem ident="hospitality" mode="add"/>
+                  <valItem ident="ironmonger" mode="add"/>
+                  <valItem ident="instrumentMaker" mode="add"/>
+                  <valItem ident="judge" mode="add"/>
+                  <valItem ident="lawyer" mode="add"/>
+                  <valItem ident="legalOffice" mode="add"/>
+                  <valItem ident="manualLabourer" mode="add"/>
+                  <valItem ident="mason" mode="add"/>
+                  <valItem ident="masterRevels" mode="add"/>
+                  <valItem ident="mayor" mode="add"/>
+                  <valItem ident="medicalDoctor" mode="add"/>
+                  <valItem ident="memberParliament" mode="add"/>
+                  <valItem ident="mercer" mode="add"/>
+                  <valItem ident="merchant" mode="add"/>
+                  <valItem ident="merchantTaylor" mode="add"/>
+                  <valItem ident="messenger" mode="add"/>
+                  <valItem ident="metalWorker" mode="add"/>
+                  <valItem ident="musician" mode="add"/>
+                  <valItem ident="parishClerk" mode="add"/>
+                  <valItem ident="performanceOffice" mode="add">
+                    <desc>includes bearwards, masters of game, directors of choirs, etc.</desc>
+                  </valItem>
+                  <valItem ident="performer" mode="add"/>
+                  <valItem ident="plumber" mode="add"/>
+                  <valItem ident="religiousOffice" mode="add">
+                    <desc>includes abbots, cardinals, bishops, etc.</desc>
+                  </valItem>
+                  <valItem ident="salter" mode="add"/>
+                  <valItem ident="scrivener" mode="add"/>
+                  <valItem ident="servant" mode="add"/>
+                  <valItem ident="sexWorker" mode="add"/>
+                  <valItem ident="sheriff" mode="add"/>
+                  <valItem ident="singer" mode="add"/>
+                  <valItem ident="skinner" mode="add"/>
+                  <valItem ident="stationer" mode="add"/>
+                  <valItem ident="surveyor" mode="add"/>
+                  <valItem ident="tailor" mode="add"/>
+                  <valItem ident="transportationWorker" mode="add"/>
+                  <valItem ident="vintner" mode="add"/>
+                  <valItem ident="wait" mode="add"/>
+                  <valItem ident="writer" mode="add"/>
+                </valList>
+              </attDef>
+              <attDef ident="calendar" mode="delete"/>
+              <attDef ident="when-iso" mode="delete"/>
+              <attDef ident="notBefore-iso" mode="delete"/>
+              <attDef ident="notAfter-iso" mode="delete"/>
+              <attDef ident="from-iso" mode="delete"/>
+              <attDef ident="to-iso" mode="delete"/>
+              <attDef ident="unit" mode="delete"/>
+              <attDef ident="quantity" mode="delete"/>
+              <attDef ident="extent" mode="delete"/>
+              <attDef ident="scope" mode="delete"/>
+              <attDef ident="source" mode="delete"/>
+            </attList>
+          </elementSpec>
+
+          <!-- persName: modify @cert for CWRC added by DJ (removed original REED definite/reasonably certain, probable, speculative to align with CWRC)-->
+          <elementSpec ident="persName" mode="change" module="namesdates">
+            <attList>
+              <attDef ident="cert" mode="change">
+                <valList mode="add" type="closed">
+                  <valItem ident="high">
+                    <desc>There is a high degree of certainty about this person</desc>
+                  </valItem>
+                  <valItem ident="moderate">
+                    <desc>There is a moderate degree of certainty about this person</desc>
+                  </valItem>
+                  <valItem ident="low">
+                    <desc>There is a low degree of certainty about this person</desc>
+                  </valItem>
+                  <valItem ident="unknown">
+                    <desc>The person is unknown</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+              <!-- DKJ: beginning list of occupations/guilds as @roles to be tagged with persName -->
+              <attDef ident="role" mode="change">
+                <valList mode="add" type="closed">
+                  <valItem ident="alderman" mode="add"/>
+                  <valItem ident="ambassador" mode="add"/>
+                  <valItem ident="animalKeeper" mode="add"/>
+                  <valItem ident="baker" mode="add"/>
+                  <valItem ident="barber" mode="add"/>
+                  <valItem ident="blacksmith" mode="add"/>
+                  <valItem ident="brewer" mode="add"/>
+                  <valItem ident="butcher" mode="add"/>
+                  <valItem ident="carpenter" mode="add"/>
+                  <valItem ident="churchwarden" mode="add"/>
+                  <valItem ident="clericalWorker" mode="add"/>
+                  <valItem ident="clothWorker" mode="add"/>
+                  <valItem ident="commercialOffice" mode="add">
+                    <desc>includes officers within guilds and companies</desc>
+                  </valItem>
+                  <valItem ident="cooper" mode="add"/>
+                  <valItem ident="deliveryPerson" mode="add"/>
+                  <valItem ident="draper" mode="add"/>
+                  <valItem ident="fletcher" mode="add"/>
+                  <valItem ident="gardener" mode="add"/>
+                  <valItem ident="glover" mode="add"/>
+                  <valItem ident="goldsmith" mode="add"/>
+                  <valItem ident="governmentalOffice" mode="add">
+                    <desc>includes royal appointments, councillors, solicitor/attourneys general,
+                      etc.</desc>
+                  </valItem>
+                  <valItem ident="haberdasher" mode="add"/>
+                  <valItem ident="hospitality" mode="add"/>
+                  <valItem ident="ironmonger" mode="add"/>
+                  <valItem ident="instrumentMaker" mode="add"/>
+                  <valItem ident="judge" mode="add"/>
+                  <valItem ident="lawyer" mode="add"/>
+                  <valItem ident="legalOffice" mode="add"/>
+                  <valItem ident="manualLabourer" mode="add"/>
+                  <valItem ident="mason" mode="add"/>
+                  <valItem ident="masterRevels" mode="add"/>
+                  <valItem ident="mayor" mode="add"/>
+                  <valItem ident="medicalDoctor" mode="add"/>
+                  <valItem ident="memberParliament" mode="add"/>
+                  <valItem ident="mercer" mode="add"/>
+                  <valItem ident="merchant" mode="add"/>
+                  <valItem ident="merchantTaylor" mode="add"/>
+                  <valItem ident="messenger" mode="add"/>
+                  <valItem ident="metalWorker" mode="add"/>
+                  <valItem ident="musician" mode="add"/>
+                  <valItem ident="parishClerk" mode="add"/>
+                  <valItem ident="performanceOffice" mode="add">
+                    <desc>includes bearwards, masters of game, directors of choirs, etc.</desc>
+                  </valItem>
+                  <valItem ident="performer" mode="add"/>
+                  <valItem ident="plumber" mode="add"/>
+                  <valItem ident="religiousOffice" mode="add">
+                    <desc>includes abbots, cardinals, bishops, etc.</desc>
+                  </valItem>
+                  <valItem ident="salter" mode="add"/>
+                  <valItem ident="scrivener" mode="add"/>
+                  <valItem ident="servant" mode="add"/>
+                  <valItem ident="sexWorker" mode="add"/>
+                  <valItem ident="sheriff" mode="add"/>
+                  <valItem ident="singer" mode="add"/>
+                  <valItem ident="skinner" mode="add"/>
+                  <valItem ident="stationer" mode="add"/>
+                  <valItem ident="surveyor" mode="add"/>
+                  <valItem ident="tailor" mode="add"/>
+                  <valItem ident="transportationWorker" mode="add"/>
+                  <valItem ident="vintner" mode="add"/>
+                  <valItem ident="wait" mode="add"/>
+                  <valItem ident="writer" mode="add"/>
+                </valList>
+              </attDef>
+              <attDef ident="calendar" mode="delete"/>
+              <attDef ident="when-iso" mode="delete"/>
+              <attDef ident="notBefore-iso" mode="delete"/>
+              <attDef ident="notAfter-iso" mode="delete"/>
+              <attDef ident="from-iso" mode="delete"/>
+              <attDef ident="to-iso" mode="delete"/>
+              <attDef ident="unit" mode="delete"/>
+              <attDef ident="quantity" mode="delete"/>
+              <attDef ident="extent" mode="delete"/>
+              <attDef ident="scope" mode="delete"/>
+              <attDef ident="source" mode="delete"/>
+            </attList>
+
+          </elementSpec>
+
           <!-- placeName: modify @cert for CWRC added by DJ (removed original REED definite/reasonably certain, probable, speculative to align with CWRC)-->
           <elementSpec ident="placeName" mode="change" module="namesdates">
             <attList>
@@ -867,56 +894,82 @@
                 <valList mode="add" type="closed">
                   <valItem ident="arena" mode="add" sameAs="https://id.lincsproject.ca/eml#Arena"/>
                   <valItem ident="bar" mode="add" sameAs="https://id.lincsproject.ca/eml#Bar"/>
-                  <valItem ident="barrier" mode="add" sameAs="https://id.lincsproject.ca/eml#Barrier"/>
-                  <valItem ident="bodyOfWater" mode="add" sameAs="https://id.lincsproject.ca/eml#BodyOfWater"/>
-                  <valItem ident="bookshop" mode="add" sameAs="https://id.lincsproject.ca/eml#Bookshop"/>
-                  <valItem ident="bridge" mode="add" sameAs="https://id.lincsproject.ca/eml#Bridge"/> 
-                  <valItem ident="brothel" mode="add" sameAs="https://id.lincsproject.ca/eml#Brothel"/>
-                  <valItem ident="building" mode="add" sameAs="https://id.lincsproject.ca/eml#Building"/>
+                  <valItem ident="barrier" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#Barrier"/>
+                  <valItem ident="bodyOfWater" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#BodyOfWater"/>
+                  <valItem ident="bookshop" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#Bookshop"/>
+                  <valItem ident="bridge" mode="add" sameAs="https://id.lincsproject.ca/eml#Bridge"/>
+                  <valItem ident="brothel" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#Brothel"/>
+                  <valItem ident="building" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#Building"/>
                   <valItem ident="chapel" mode="add" sameAs="https://id.lincsproject.ca/eml#Chapel"/>
                   <valItem ident="church" mode="add" sameAs="https://id.lincsproject.ca/eml#Church"/>
-                  <valItem ident="churchHouse" mode="add" sameAs="https://id.lincsproject.ca/eml#ChurchHouse" />
-                  <valItem ident="diocese" mode="add" sameAs="https://id.lincsproject.ca/eml#Dioocese"/>
+                  <valItem ident="churchHouse" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#ChurchHouse"/>
+                  <valItem ident="diocese" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#Dioocese"/>
                   <valItem ident="garden" mode="add" sameAs="https://id.lincsproject.ca/eml#Garden"/>
                   <valItem ident="gate" mode="add" sameAs="https://id.lincsproject.ca/eml#Gate"/>
                   <valItem ident="hall" mode="add" sameAs="https://id.lincsproject.ca/eml#Hall"/>
                   <valItem ident="hill" mode="add" sameAs="https://id.lincsproject.ca/eml#Hill"/>
-                  <valItem ident="hospital" mode="add" sameAs="https://id.lincsproject.ca/eml#Hospital"/>
-                  <valItem ident="innCourt" mode="add" sameAs="https://id.lincsproject.ca/eml#InnOfCourt"/>
-                  <valItem ident="institution" mode="add" sameAs="https://id.lincsproject.ca/eml#Institution"/>
-                  <valItem ident="landFeature" mode="add" sameAs="https://id.lincsproject.ca/eml#LandFeature"/>
-                  <valItem ident="liberty" mode="add" sameAs="https://id.lincsproject.ca/eml#Liberty"/>
+                  <valItem ident="hospital" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#Hospital"/>
+                  <valItem ident="innCourt" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#InnOfCourt"/>
+                  <valItem ident="institution" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#Institution"/>
+                  <valItem ident="landFeature" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#LandFeature"/>
+                  <valItem ident="liberty" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#Liberty"/>
                   <valItem ident="manor" mode="add" sameAs="https://id.lincsproject.ca/eml#Manor"/>
-                  <valItem ident="market" mode="add" sameAs="https://id.lincsproject.ca/eml#Market"/>                  
-                  <valItem ident="monument" mode="add" sameAs="https://id.lincsproject.ca/eml#Monument"/>
-                  <valItem ident="neighbourhood" mode="add" sameAs="https://id.lincsproject.ca/eml#Neighbourhood"/>
-                  <valItem ident="outdoorSpace" mode="add" sameAs="https://id.lincsproject.ca/eml#OutdoorSpace"/>
+                  <valItem ident="market" mode="add" sameAs="https://id.lincsproject.ca/eml#Market"/>
+                  <valItem ident="monument" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#Monument"/>
+                  <valItem ident="neighbourhood" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#Neighbourhood"/>
+                  <valItem ident="outdoorSpace" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#OutdoorSpace"/>
                   <valItem ident="palace" mode="add" sameAs="https://id.lincsproject.ca/eml#Palace"/>
                   <valItem ident="parish" mode="add" sameAs="https://id.lincsproject.ca/eml#Parish"/>
-                  <valItem ident="playhouse" mode="add" sameAs="https://id.lincsproject.ca/eml#Playhouse"/>
+                  <valItem ident="playhouse" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#Playhouse"/>
                   <valItem ident="prison" mode="add" sameAs="https://id.lincsproject.ca/eml#Prison"/>
-                  <valItem ident="religiousHouse" mode="add" sameAs="https://id.lincsproject.ca/eml#ReligiousHouse"/>
-                  <valItem ident="residence" mode="add" sameAs="https://id.lincsproject.ca/eml#Residence"/>
-                  <valItem ident="riversideFeature" mode="add" sameAs="https://id.lincsproject.ca/eml#RiversideFeature"/>
+                  <valItem ident="religiousHouse" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#ReligiousHouse"/>
+                  <valItem ident="residence" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#Residence"/>
+                  <valItem ident="riversideFeature" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#RiversideFeature"/>
                   <valItem ident="road" mode="add" sameAs="https://id.lincsproject.ca/eml#Road"/>
                   <valItem ident="room" mode="add" sameAs="https://id.lincsproject.ca/eml#Room"/>
                   <valItem ident="school" mode="add" sameAs="https://id.lincsproject.ca/eml#School"/>
                   <valItem ident="shop" mode="add" sameAs="https://id.lincsproject.ca/eml#Shop"/>
                   <valItem ident="stairs" mode="add" sameAs="https://id.lincsproject.ca/eml#Stairs"/>
                   <valItem ident="street" mode="add" sameAs="https://id.lincsproject.ca/eml#Street"/>
-                  <valItem ident="victuallingHouse" mode="add" sameAs="https://id.lincsproject.ca/eml#VictuallingHouse"/>
+                  <valItem ident="victuallingHouse" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#VictuallingHouse"/>
                   <valItem ident="wall" mode="add" sameAs="https://id.lincsproject.ca/eml#Wall"/>
                   <valItem ident="ward" mode="add" sameAs="https://id.lincsproject.ca/eml#Ward"/>
                 </valList>
               </attDef>
               <attDef ident="role" mode="change">
                 <valList mode="add" type="closed">
-                  <valItem ident="placeCommerce" mode="add" sameAs="https://id.lincsproject.ca/eml#PlaceOfCommerce"/>
-                  <valItem ident="placeEducation" mode="add" sameAs="https://id.lincsproject.ca/eml#PlaceOfEducation"/>
-                  <valItem ident="placeEntertainment" mode="add" sameAs="https://id.lincsproject.ca/eml#PlaceOfEntertainment"/>
-                  <valItem ident="placeLegalActivity" mode="add" sameAs="https://id.lincsproject.ca/eml#PlaceOfLegalActivity" />
-                  <valItem ident="placePunishment" mode="add" sameAs="https://id.lincsproject.ca/eml#PlaceOfPunishment"/>
-                  <valItem ident="placeReligiousActivity" sameAs="https://id.lincsproject.ca/eml#PlaceOfReligiousActivity"/>
+                  <valItem ident="placeCommerce" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#PlaceOfCommerce"/>
+                  <valItem ident="placeEducation" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#PlaceOfEducation"/>
+                  <valItem ident="placeEntertainment" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#PlaceOfEntertainment"/>
+                  <valItem ident="placeLegalActivity" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#PlaceOfLegalActivity"/>
+                  <valItem ident="placePunishment" mode="add"
+                    sameAs="https://id.lincsproject.ca/eml#PlaceOfPunishment"/>
+                  <valItem ident="placeReligiousActivity"
+                    sameAs="https://id.lincsproject.ca/eml#PlaceOfReligiousActivity"/>
                 </valList>
               </attDef>
               <attDef ident="calendar" mode="delete"/>
@@ -930,10 +983,10 @@
               <attDef ident="extent" mode="delete"/>
               <attDef ident="scope" mode="delete"/>
               <attDef ident="source" mode="delete"/>
-              </attList>
+            </attList>
           </elementSpec>
-          
-             <!-- adding objectName type values -->
+
+          <!-- adding objectName type values -->
           <elementSpec ident="objectName" mode="change" module="namesdates">
             <attList>
               <attDef ident="type" mode="change">
@@ -943,7 +996,7 @@
                   <valItem ident="animal"/>
                   <valItem ident="transportation"/>
                   <valItem ident="food"/>
-                 <valItem ident="costume"/>
+                  <valItem ident="costume"/>
                   <valItem ident="fuel"/>
                   <valItem ident="torch"/>
                   <valItem ident="instrument"/>
@@ -953,7 +1006,7 @@
               </attDef>
             </attList>
           </elementSpec>
-          
+
           <!-- delete lots of attributes -->
           <elementSpec ident="settlement" mode="change" module="namesdates">
             <attList>
@@ -965,10 +1018,10 @@
               <attDef ident="to-iso" mode="delete"/>
             </attList>
           </elementSpec>
-          
+
           <classSpec ident="att.datable.custom" module="namesdates" type="atts" mode="delete"/>
           <classSpec ident="att.cReferencing" module="tei" type="atts" mode="delete"/>
-          
+
           <!-- delete lots of attributes -->
           <classSpec ident="att.datable" module="tei" type="atts" mode="change">
             <attList>
@@ -1064,14 +1117,14 @@
               <attDef ident="nymRef" mode="delete"/>
             </attList>
           </classSpec>
-          
+
           <!-- tagsdoc module to include code -->
           <moduleRef key="tagdocs" include="code"/>
           <!-- textstructure module -->
-          
+
           <moduleRef key="textstructure"
             include="TEI body div group text floatingText closer front back salute signed trailer"/>
-          
+
           <!-- text: @type -->
           <elementSpec ident="text" mode="change" module="textstructure">
             <attList>
@@ -1084,7 +1137,7 @@
               </attDef>
             </attList>
           </elementSpec>
-          
+
           <!-- floatingText: @type -->
           <elementSpec ident="floatingText" mode="change" module="textstructure">
             <attList>
@@ -1097,7 +1150,7 @@
               </attDef>
             </attList>
           </elementSpec>
-          
+
           <!-- div -->
           <elementSpec ident="div" mode="change" module="textstructure">
             <attList>
@@ -1123,18 +1176,18 @@
               </attDef>
             </attList>
           </elementSpec>
-          
-          
+
+
           <!-- transcription module -->
           <moduleRef key="transcr"
             include="am addSpan damage delSpan ex facsimile fw handShift space subst supplied surface surplus"/>
-          
+
           <elementSpec ident="addSpan" mode="change" module="transcr">
             <attList>
               <attDef ident="scope" mode="delete"/>
             </attList>
           </elementSpec>
-          
+
           <!-- damage:type and agent -->
           <elementSpec ident="damage" mode="change" module="transcr">
             <attList>
@@ -1260,7 +1313,7 @@
           <classSpec ident="att.global.change" module="transcr" type="atts" mode="delete"/>
           <!-- end of schema -->
         </schemaSpec>
-       
+
       </div>
     </body>
   </text>
