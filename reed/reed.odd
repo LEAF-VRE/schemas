@@ -637,7 +637,17 @@
           <!-- namesdates: including lots of elements-->
           <moduleRef key="namesdates"
             include="persName surname forename roleName addName genName placeName geogName state trait event listEvent idno relation listRelation orgName objectName person place settlement occupation name affiliation"/>
-
+          
+          <!-- Created eventName element -->
+          <elementSpec ident="eventName" mode="add"
+            module="namesdates">
+            <classes>
+              <memberOf key="att.datable"/>
+              <memberOf key="att.typed"/>
+            </classes>
+          </elementSpec>
+          
+          
           <!-- delete lots of attributes -->
 
           <!-- event: modify @type to include category from CWRC -->
